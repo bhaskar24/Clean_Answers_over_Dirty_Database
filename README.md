@@ -19,7 +19,10 @@ Simulator script should be executed as
 ### Simulator SQL Command Format
 
 ```sql
-`Select Attribute1,Attribute2,...,AttributeN from Table1,Table2 where condition1,condition2..,conditionN groupBy Attribute1,...AttributeN`
+Select Attribute1,Attribute2,...,AttributeN 
+   from Table1,Table2 
+      where condition1,condition2..,conditionN 
+         groupBy Attribute1,...AttributeN
 ```
 ### Query Re-Writing Example
 In the absence of Query Re-writing on Dirty Database<br/>
@@ -36,11 +39,12 @@ c1 | 0.3 |
 c2 | 0.2 |
 
 But if we apply we want clean answers over Dirty Database using Probabilistic Database
-
-`select id,sum(prob)`<br/>
-`   from customer`<br/>
-`      where balance>10` <br/>
-`        groupby id` <br/>
+```sql
+select id,sum(prob)
+   from customer
+      where balance>10
+        groupby id
+```
 id | prob |
 --- | --- |
 c1 | 0.1 |
