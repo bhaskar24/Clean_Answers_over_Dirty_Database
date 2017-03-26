@@ -6,7 +6,7 @@
 Authors propose a complementary approach that permits declarative query answering over duplicated data, where each duplicate is associated with a probability of being in the clean database. This repository contains the simulation of author work[1] using python[2] script in which they rewrite queries over a database containing duplicates to return each answer with the probability that the answer is in the clean database.
 
 ### Refernce Dataset
-Cora Dataset
+Synthetic Data Generator, UIS Database Generator and Cora Dataset
 
 ### Simulating Simulator	<br/>
 
@@ -23,9 +23,12 @@ Simulator script should be executed as
 ```
 ### Query Re-Writing Example
 In the absence of Query Re-writing on Dirty Database<br/>
-`select id,prob `<br/>
-`   from customer`<br/>
-`      where balance>10`<br/>
+
+```sql
+select id,prob
+   from customer
+      where balance>10
+```
 id | prob |
 --- | --- |
 c1 | 0.7 |
