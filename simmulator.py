@@ -365,6 +365,52 @@ def group(tble,grpBy):
         fp.write(s)
         fp.close()
     #return table ie tmp.csv ordered by grpBy
+def form_table(col,start,end,c):
+    diff=end-start
+    for row_c in range(0,diff):
+        fw=open('./tables/tmp'+str(row_c)+'.csv','w')
+        from prettytable import from_csv
+        fp = open("./tables/tmp.csv", "r")
+        customer = from_csv(fp)
+        fp.close()
+        fp=fw
+        s=customer.get_string(start=start,end=end).replace('+','').replace(' | ',',').replace('-','').replace('| ','').replace(' |','').strip()
+        s= s.replace(' ','').replace('\n\n','\n')
+        fp.write(s)
+        fp.close()
+    diff=end-start
+    import csv
+    col_l=col.split(',')
+    Dic={}
+    print "./tables/tmp"+str(c)+".csv"
+    fp = open("./tables/tmp"+str(row_c)+".csv", "r")
+    reader = csv.DictReader(fp,delimiter=',')
+    for row in reader:
+        for attrib in col_l:
+            if 'sum(' not in attrib:
+                try:
+                    Dic[attrib]=row[attrib]
+                except:
+                    pass
+            else:
+                try:
+                    attrib=attrib.replace('sum(','').replace(')','')
+                    Dic[attrib]=Dic[attrib]+float(row[attrib])
+                except:
+                    attrib=attrib.replace('sum(','').replace(')','')
+                    Dic[attrib]=float(row[attrib])
+        #print Dic
+    print Dic
+#    for i,j in Dic.iteritems():
+#        fnlW.write()
+    reader=''
+    with open('./tables/tmpGroup.csv','a') as fnlW:  # Just use 'w' mode in 3.x
+        w = csv.DictWriter(fnlW, Dic.keys())
+#        w.writeheader()
+        w.writerow(Dic)
+    print '\n'
+    fp.close()
+    #return tmp.csv having clustered columns 
 def tab_print_grpBy(col,tble,cond,grpBy):
     #qry=[u'id,sum(prob)', u'customer', u'balance>10', u'id']
     #col=inp[0]
@@ -397,24 +443,61 @@ def tab_print_grpBy(col,tble,cond,grpBy):
             fr = open('./tables/tmp.csv','r')
             fr = csv.DictReader(fr)
             Dic={}
+            ls=[]
             for row in fr:
                 try:
-                    Dic[row[grpBy]] = [x+1 for x in Dic[row[grpBy]]]
+                    e=Dic[row[grpBy]]
+                    end=ls[1]
+                    ls=[]
                     end=end+1
+                    ls.append(start)
+                    ls.append(end)       
+                    Dic[row[grpBy]] = ls
                 except:
-#                    start=end#start+1 # 011223
-#                    end=end+1
-                    Dic[row[grpBy]]=[start, end+1]
-                    start=end#start+1
+                    ls=[]
+                    start=end
+                    end=end+1
+                    ls.append(start)
+                    ls.append(end)
+                    Dic[row[grpBy]]=ls
+            grps=[]
             for i,j in Dic.iteritems():
-                print i,j
+                grps.append(j)
+            grps.sort()
+            print 'Atrib '+ col
+            c=0
+            import os
+            os.remove('./tables/tmpGroup.csv')
+            col_l=col.split(',')
+            Dic={}
+            for attrib in col_l:
+                if 'sum(' not in attrib:
+                    try:
+                        Dic[attrib]=attrib
+                    except:
+                        pass
+                else:
+                    try:
+                        attrib=attrib.replace('sum(','').replace(')','')
+                        Dic[attrib]=attrib
+                    except:
+                        pass
+            with open('./tables/tmpGroup.csv','a') as fnlW:  # Just use 'w' mode in 3.x
+                w = csv.DictWriter(fnlW, Dic.keys())
+                w.writerow(Dic)
+            fnlW.close()
+            for i in grps:
+                print i
+                start=i[0]
+                end  =i[1]
+                form_table(col,start,end,c)
+                c=c+1
             from prettytable import from_csv
-            fp = open('./tables/tmp.csv','r')
+            fp = open('./tables/tmpGroup.csv','r')
             customer = from_csv(fp)
-            print customer.get_string(start=0,end=2, fields=['prob'])
-            print customer.get_string(start=2,end=3, fields=['prob'])
-            print 'Work in Progress'
-            #call
+            text2.delete('1.0', END) #For delete the text from input box
+            text2.insert(INSERT, customer)
+
             #print sum_columns('sum(prob*income)',True)
             #print sum_columns('sum(income)',False)
 

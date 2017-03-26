@@ -1,4 +1,4 @@
-id,custId,name,balance,prob
-c1,m1,John,20,0.7
-c1,m2,John,30,0.3
-c2,m3,Mary,27,0.2
+"id","custId","name","balance","prob"
+"c1","m1","John",20,0.7
+"c1","m2","John",30,0.3
+"c2","m3","Mary",27,0.2
