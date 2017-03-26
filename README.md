@@ -14,8 +14,12 @@ Simulator script should be executed as
 
 `./python simulator.py`
 
+### Simulator SQL Command Format
+
+`Select Attribute1,Attribute2,...,AttributeN from Table1,Table2 where condition1,condition2..,conditionN groupBy Attribute1,...AttributeN`
+
 ### References         <br/>
 
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
 
-[2] http://www.nsnam.org/
+[2] https://github.com/mysql/mysql-server
