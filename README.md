@@ -24,14 +24,14 @@ In the absence of Query Re-writing on Dirty Database
    from customer
       where balance>10`
 
-Output
-------------
-| id | prob|
-------------
-| c1 | 0.7 |
-| c1 | 0.3 |
-| c2 | 0.2 |
-------------
+Output<br/>
+------------<br/>
+| id | prob|<br/>
+------------<br/>
+| c1 | 0.7 |<br/>
+| c1 | 0.3 |<br/>
+| c2 | 0.2 |<br/>
+------------<br/>
 
 But if we apply we want clean answers over Dirty Database using Probabilistic Database
 
@@ -40,13 +40,13 @@ But if we apply we want clean answers over Dirty Database using Probabilistic Da
       where balance>10
         groupby id`
 
-Output
-------------
-| id | prob|
-------------
-| c1 | 1.0 |
-| c2 | 0.2 |
-------------
+Output<br/>
+------------<br/>
+| id | prob|<br/>
+------------<br/>
+| c1 | 1.0 |<br/>
+| c2 | 0.2 |<br/>
+------------<br/>
         
 ### References         <br/>
 
