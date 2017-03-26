@@ -18,6 +18,36 @@ Simulator script should be executed as
 
 `Select Attribute1,Attribute2,...,AttributeN from Table1,Table2 where condition1,condition2..,conditionN groupBy Attribute1,...AttributeN`
 
+### Query Re-Writing Example
+In the absence of Query Re-writing on Dirty Database
+`select id,prob
+   from customer
+      where balance>10`
+
+Output
+------------
+| id | prob|
+------------
+| c1 | 0.7 |
+| c1 | 0.3 |
+| c2 | 0.2 |
+------------
+
+But if we apply we want clean answers over Dirty Database using Probabilistic Database
+
+`select id,sum(prob)
+   from customer
+      where balance>10
+        groupby id`
+
+Output
+------------
+| id | prob|
+------------
+| c1 | 1.0 |
+| c2 | 0.2 |
+------------
+        
 ### References         <br/>
 
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
