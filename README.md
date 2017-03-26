@@ -20,11 +20,10 @@ Simulator script should be executed as
 
 ### Query Re-Writing Example
 In the absence of Query Re-writing on Dirty Database
-`select id,prob
-   from customer
-      where balance>10`
+`select id,prob `<br/>
+`   from customer`<br/>
+`      where balance>10`<br/>
 
-Output<br/>
 ------------<br/>
 | id | prob|<br/>
 ------------<br/>
@@ -35,12 +34,11 @@ Output<br/>
 
 But if we apply we want clean answers over Dirty Database using Probabilistic Database
 
-`select id,sum(prob)
-   from customer
-      where balance>10
-        groupby id`
+`select id,sum(prob)`<br/>
+`   from customer`<br/>
+`      where balance>10` <br/>
+`        groupby id` <br/>
 
-Output<br/>
 ------------<br/>
 | id | prob|<br/>
 ------------<br/>
