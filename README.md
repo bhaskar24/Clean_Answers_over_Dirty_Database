@@ -26,23 +26,6 @@ In the absence of Query Re-writing on Dirty Database<br/>
 `select id,prob `<br/>
 `   from customer`<br/>
 `      where balance>10`<br/>
-
-|   id | prob|<br/>
-------------<br/>
- c1 | 0.7 |<br/>
- c1 | 0.3 |<br/>
- c2 | 0.2 |<br/>
-------------<br/>
-| id            | prob          | 
-| ------------- |:-------------:|
-| c1            | 0.7           |
-| c1            | 0.3           |
-| c2            | 0.2           |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
-
 id | prob |
 --- | --- |
 c1 | 0.7 |
@@ -55,13 +38,10 @@ But if we apply we want clean answers over Dirty Database using Probabilistic Da
 `   from customer`<br/>
 `      where balance>10` <br/>
 `        groupby id` <br/>
-
-------------<br/>
-| id | prob|<br/>
-------------<br/>
-| c1 | 1.0 |<br/>
-| c2 | 0.2 |<br/>
-------------<br/>
+id | prob |
+--- | --- |
+c1 | 0.1 |
+c2 | 0.2 |
         
 ### References         <br/>
 
