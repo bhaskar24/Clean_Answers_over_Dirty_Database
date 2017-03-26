@@ -1,0 +1,4 @@
+"id","orderId","custFk","cIdFk","quantity","prob"
+"o1",11,"m1","c1",3,1
+"o2",12,"m2","c1",2,0.5
+"o2",13,"m3","c2",5,0.5

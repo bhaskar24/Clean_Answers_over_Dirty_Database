@@ -1,0 +1,7 @@
+orderId, custFk, quantity, custId, name, income, prob
+11,m1,3,c1,John,120,0.9
+11,m1,3,c2,Mary,140,0.4
+11,m1,3,c2,Marion,40,0.6
+13,m3,5,c1,John,120,0.9
+13,m3,5,c2,Mary,140,0.4
+13,m3,5,c2,Marion,40,0.6

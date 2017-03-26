@@ -1,5 +1,5 @@
-"custId","name","income","prob"
-"c1","John",120,0.9
-"c1","John",80,0.1
-"c2","Mary",140,0.4
-"c2","Marion",40,0.6
+"id","custId","name","balance","prob"
+"c1","m1","John",20,0.7
+"c1","m2","John",30,0.3
+"c2","m3","Mary",27,0.2
+"c2","m4","Marion",5,0.8
