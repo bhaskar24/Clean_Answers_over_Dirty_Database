@@ -19,18 +19,22 @@ Simulator script should be executed as
 `Select Attribute1,Attribute2,...,AttributeN from Table1,Table2 where condition1,condition2..,conditionN groupBy Attribute1,...AttributeN`
 
 ### Query Re-Writing Example
-In the absence of Query Re-writing on Dirty Database
+In the absence of Query Re-writing on Dirty Database<br/>
 `select id,prob `<br/>
 `   from customer`<br/>
 `      where balance>10`<br/>
 
-------------<br/>
 | id | prob|<br/>
 ------------<br/>
-| c1 | 0.7 |<br/>
-| c1 | 0.3 |<br/>
-| c2 | 0.2 |<br/>
+ c1 | 0.7 |<br/>
+ c1 | 0.3 |<br/>
+ c2 | 0.2 |<br/>
 ------------<br/>
+| id            | prob          | 
+| ------------- |:-------------:|
+| c1            | 0.7           |
+| c1            | 0.3           |
+| c2            | 0.2           |
 
 But if we apply we want clean answers over Dirty Database using Probabilistic Database
 
