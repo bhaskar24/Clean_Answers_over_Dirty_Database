@@ -1,4 +1,4 @@
-"id","custId","name","balance","prob","id","orderId","custFk","cIdFk","quantity","prob"
+customer.id,customer.custId,customer.name,customer.balance,customer.prob,order.id,order.orderId,order.custFk,order.cIdFk,order.quantity,order.prob
 "c1","m1","John",20,0.7,"o1",11,"m1","c1",3,1
 "c1","m1","John",20,0.7,"o2",12,"m2","c1",2,0.5
 "c1","m1","John",20,0.7,"o2",13,"m3","c2",5,0.5

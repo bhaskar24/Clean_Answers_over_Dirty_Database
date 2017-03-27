@@ -224,7 +224,27 @@ def cross_prod(tab_list):
             if c2<1:
                 for row_t2 in fr2:
                     if c1<1:
-                        fw.write(row_t1.replace('\n','')+','+row_t2)
+                        tmpR=row_t1.replace('\n','').replace('"','')
+                        tmpR=tmpR.split(',')
+                        tc=0
+                        rt=""
+                        for tR in tmpR:
+                            if tc!=len(tmpR)-1:
+                                rt=rt+tab_list[0]+'.'+tR+','
+                            else:
+                                rt=rt+tab_list[0]+'.'+tR
+                            tc=tc+1
+                        tmpR=row_t2.replace('\n','').replace('"','')
+                        tmpR=tmpR.split(',')
+                        tc=0
+                        rt2=""
+                        for tR in tmpR:
+                            if tc!=len(tmpR)-1:
+                                rt2=rt2+tab_list[1]+'.'+tR+','
+                            else:
+                                rt2=rt2+tab_list[1]+'.'+tR
+                            tc=tc+1
+                        fw.write(rt+','+rt2+'\n')
                         break
                     else:
                         c1=c1+1
@@ -629,7 +649,7 @@ if __name__=='__main__':
    widget_grid()
 
 #   print sum_columns('sum(prob*balance)',True)
-   print sum_columns('sum(balance)',False)
+   #print sum_columns('sum(balance)',False)
    #qry=[u'id,sum(prob)', u'customer', u'balance>10', u'id']
    col='id,sum(prob)'
    tble='customer'
