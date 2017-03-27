@@ -173,7 +173,7 @@ def tmp_csv(table_name, conditions, status):
 #                  print sf
 #                  print rw
 #                  print reg(sw)
-                  if reg(sw) is True:
+                  if reg(sw) is True and '.' not in sw:
 #                     print row1
                      if cnd_s>0:
                         fw.write(row1+'\n')
@@ -181,6 +181,23 @@ def tmp_csv(table_name, conditions, status):
                      else:
                         fw.write(row1)
 #                        print 'write'
+                  else:
+                      sf=s[tmpL[1]].replace('"','').replace('\n','')
+                      rw=row.split(',')
+                      rw=rw[tmpL[1]].replace("'",'').replace('\n','')
+                      sw=sw.replace(sf,rw)
+#                      print sw
+#                      print sf
+#                      print rw
+                      if reg(sw) is True and '.' not in sw:
+    #                     print row1
+                         if cnd_s>0:
+                            fw.write(row1+'\n')
+    #                        print 'write'
+                         else:
+                            fw.write(row1)
+    #                        print 'write'
+
          s=[]
          cnt=0
          c=0

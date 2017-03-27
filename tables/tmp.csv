@@ -1,4 +1,7 @@
-customer.id, customer.custId, customer.name, customer.balance, customer.prob, order.id, order.orderId, order.custFk, order.cIdFk, order.quantity, order.prob
-c1,m1,John,20,0.7,o1,11,m1,c1,3,1
-c1,m2,John,30,0.3,o1,11,m1,c1,3,1
-c2,m3,Mary,27,0.2,o1,11,m1,c1,3,1
+customer.id,customer.custId,customer.name,customer.balance,customer.prob,order.id,order.orderId,order.custFk,order.cIdFk,order.quantity,order.prob
+"c1","m1","John",20,0.7,"o1",11,"m1","c1",3,1
+"c1","m1","John",20,0.7,"o2",12,"m2","c1",2,0.5
+"c1","m2","John",30,0.3,"o1",11,"m1","c1",3,1
+"c1","m2","John",30,0.3,"o2",12,"m2","c1",2,0.5
+"c2","m3","Mary",27,0.2,"o2",13,"m3","c2",5,0.5
+"c2","m4","Marion",5,0.8,"o2",13,"m3","c2",5,0.5
