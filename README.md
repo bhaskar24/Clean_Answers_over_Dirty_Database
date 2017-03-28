@@ -25,7 +25,7 @@ Select Attribute1,Attribute2,...,AttributeN
          groupBy Attribute1,...AttributeN
 ```
 ### Query Re-Writing Example
-Snippet of Customer Dataset
+Dataset Snippet of Customer Table
 
 id | custId | name | balance | prob |
 --- | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ c1 | m2 | John | 30 | 0.3 |
 c2 | m3 | Mary | 27 | 0.2 | 
 c2 | m4 | Marion | 5 | 0.8 | 
 
-In the absence of Query Re-writing on Dirty Database<br/>
+Normal SQL query to fetch id of those customers having balance > 10<br/>
 
 ```sql
 select id,prob
@@ -47,7 +47,7 @@ c1 | 0.7 |
 c1 | 0.3 |
 c2 | 0.2 |
 
-But if we apply we want clean answers over Dirty Database using Probabilistic Database
+But if we apply clean answers over Dirty Database using Probabilistic Database
 ```sql
 select id,sum(prob)
    from customer
@@ -58,7 +58,9 @@ id | prob |
 --- | --- |
 c1 | 0.1 |
 c2 | 0.2 |
-        
+
+### Enhancement
+
 ### References         <br/>
 
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
