@@ -61,7 +61,7 @@ c2 | 0.2 |
 
 ### Enhancement
 <p align="center">
-   <img src="https://drive.google.com/open?id=0B5nKw4aBVyAdWk9qNXFxVk5MMXM" width="350" />
+   <img src="https://drive.google.com/file/d/0B5nKw4aBVyAdWk9qNXFxVk5MMXM/view?usp=sharing" width="350" />
 </p>
 ### References         <br/>
 
