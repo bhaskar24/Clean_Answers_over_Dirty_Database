@@ -61,7 +61,7 @@ c2 | 0.2 |
 
 ### Enhancement
 <p align="center">
-   <img src="https://lh3.googleusercontent.com/-fCoImIzqAfM/AAAAAAAAAAI/AAAAAAAAAAA/AMcAYi8OfExNsZGw6c-WN2sx8dws6mz-VA/s32-c-mo/photo.jpg" width="350" />
+   <img src="https://drive.google.com/open?id=0B5nKw4aBVyAdWk9qNXFxVk5MMXM" width="350" />
 </p>
 ### References         <br/>
 
