@@ -60,7 +60,9 @@ c1 | 0.1 |
 c2 | 0.2 |
 
 ### Enhancement
-
+<p align="center">
+   <img src="https://lh3.googleusercontent.com/-fCoImIzqAfM/AAAAAAAAAAI/AAAAAAAAAAA/AMcAYi8OfExNsZGw6c-WN2sx8dws6mz-VA/s32-c-mo/photo.jpg" width="350" />
+</p>
 ### References         <br/>
 
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
