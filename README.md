@@ -59,10 +59,6 @@ id | prob |
 c1 | 0.1 |
 c2 | 0.2 |
 
-### Enhancement
-<p align="center">
-   <img src="https://drive.google.com/file/d/0B5nKw4aBVyAdWk9qNXFxVk5MMXM/view?usp=sharing" width="350" />
-</p>
 ### References         <br/>
 
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
