@@ -64,3 +64,5 @@ c2 | 0.2 |
 [1] P. Andritsos, A. Fuxman, R.J. Miller, "Clean Answers over Dirty Databases: A Probabilistic Approach", Proceedings of the 22nd International Conference on Data Engineering, 2006.
 
 [2] https://github.com/mysql/mysql-server
+
+[3] https://www.python.org/.
